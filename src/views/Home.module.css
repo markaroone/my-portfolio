@@ -1,0 +1,5 @@
+.home {
+  margin: 0 auto 0 auto;
+  margin-top: clamp(7.2rem, 7vw, 96rem);
+  max-width: 98rem;
+}
