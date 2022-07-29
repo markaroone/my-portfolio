@@ -1,37 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import RecentProjectItem from './RecentProjectItem';
+import { recentProjectsData } from '../../data/recentProjects';
+
 import styles from './RecentProjects.module.css';
 
-const recentProjects = [
-  {
-    name: 'Layag Travel Tours',
-    description: 'A travel booking application for everyone.',
-    number: 7,
-    images: [],
-    tech: ['mongoDB', 'express', 'react', 'node'],
-  },
-  {
-    name: 'Uplifted|Health Activity Tracker App',
-    description: 'Health and activity tracking application.',
-    number: 6,
-    images: [],
-    tech: ['mongoDB', 'express', 'react', 'node'],
-  },
-  {
-    name: 'La Cucina Restaurant App',
-    description: 'We deliver delicious foods at you doorstep.',
-    number: 5,
-    images: [],
-    tech: ['html', 'css', 'javascript', 'react'],
-  },
-  {
-    name: 'To Do List App',
-    description: 'Create a to do and set reminders.',
-    number: 4,
-    images: [],
-    tech: ['html', 'css', 'javascript', 'react'],
-  },
-];
+const recentProjects = recentProjectsData.slice(0, 4);
 
 function importAll(r) {
   let images = {};
@@ -59,14 +33,14 @@ recentProjects.forEach(
 );
 
 const RecentProjects = () => {
-  const [showOverlay, setShowOverlay] = useState([false, false, false, false]);
+  const location = useLocation().pathname.slice(1);
   return (
     <div className={styles.projects}>
       <h3>Recent Projects</h3>
 
       <ul className={styles['projects-container']}>
         {recentProjects.map((project, i) => (
-          <RecentProjectItem key={i} project={project} />
+          <RecentProjectItem key={i} project={project} location={location} />
         ))}
       </ul>
     </div>

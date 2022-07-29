@@ -1,26 +1,30 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import styles from './RecentProjectItem.module.css';
 
-const RecentProjectItem = ({ project }) => {
-  const navigate = useNavigate();
-
-  const navigateToProjectsHandler = () => {
-    navigate('/projects');
+const RecentProjectItem = ({ project, location }) => {
+  const navigateToProjectApplicationHandler = (link) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
   };
 
   return (
-    <li className={styles.project} onClick={navigateToProjectsHandler}>
+    <li className={styles.project}>
       <a href={project.link} target='_blank'>
         <img src={project.images[2]} alt='project image' />
 
         <div className={styles.overlay}>
-          <a className={styles.repo} href={project.repo} target='_blank'>
-            Github repo{' '}
+          <button
+            className={styles.repo}
+            onClick={(e) => {
+              navigateToProjectApplicationHandler(project.repo);
+              e.preventDefault();
+            }}
+          >
+            github repo
             <i>
               <ion-icon name='chevron-forward-outline'></ion-icon>
             </i>
-          </a>
+          </button>
+
           <p className={styles.name}>{project.name}</p>
           <p className={styles.description}>{project.description}</p>
 
