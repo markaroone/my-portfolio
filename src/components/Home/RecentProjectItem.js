@@ -15,6 +15,12 @@ const RecentProjectItem = ({ project }) => {
         <img src={project.images[2]} alt='project image' />
 
         <div className={styles.overlay}>
+          <a className={styles.repo} href={project.repo} target='_blank'>
+            Github repo{' '}
+            <i>
+              <ion-icon name='chevron-forward-outline'></ion-icon>
+            </i>
+          </a>
           <p className={styles.name}>{project.name}</p>
           <p className={styles.description}>{project.description}</p>
 

@@ -6,14 +6,16 @@ const projects = [
     images: [],
     tech: ['mongoDB', 'express', 'react', 'node'],
     link: 'https://62e2dd6e4844471ccf13f227--lively-gumption-2fffc2.netlify.app/',
+    repo: 'https://github.com/markaroone/project7-fe',
   },
   {
-    name: 'Uplifted|Health Activity Tracker App',
+    name: 'Uplifted | Health Activity Tracker App',
     description: 'Health and activity tracking application.',
     number: 6,
     images: [],
     tech: ['mongoDB', 'express', 'react', 'node'],
     link: 'https://uplift-health-web.herokuapp.com/',
+    repo: 'https://github.com/markaroone/project6-web',
   },
   {
     name: 'La Cucina Restaurant App',
@@ -22,6 +24,7 @@ const projects = [
     images: [],
     tech: ['html', 'css', 'javascript', 'react'],
     link: 'https://la-cusina.herokuapp.com/',
+    repo: 'https://github.com/markaroone/project5',
   },
   {
     name: 'To Do List App',
@@ -30,6 +33,7 @@ const projects = [
     images: [],
     tech: ['html', 'css', 'javascript', 'react'],
     link: 'https://markaroone-todo-app.herokuapp.com/',
+    repo: 'https://github.com/markaroone/project4',
   },
   {
     name: 'Pokedex',
@@ -38,6 +42,7 @@ const projects = [
     images: [],
     tech: ['html', 'css', 'javascript', 'react'],
     link: 'https://pokemon-pokedex-app-markaroone.herokuapp.com/',
+    repo: 'https://github.com/markaroone/project3',
   },
   {
     name: 'Guessing Number Game',
@@ -46,6 +51,7 @@ const projects = [
     images: [],
     tech: ['html', 'css', 'javascript'],
     link: 'https://code-breaker-number-guess.herokuapp.com/',
+    repo: 'https://github.com/markaroone/project2',
   },
   {
     name: 'To Do List App',
@@ -54,12 +60,13 @@ const projects = [
     images: [],
     tech: ['html', 'css', 'javascript'],
     link: 'https://markaroone-photography.herokuapp.com/',
+    repo: 'https://github.com/markaroone/project1',
   },
 ];
 
 function importAll(r) {
   let images = {};
-  r.keys().map((item, index) => {
+  r.keys().map((item) => {
     images[item.replace('./', '')] = r(item);
   });
   return images;

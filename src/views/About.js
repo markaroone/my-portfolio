@@ -11,10 +11,7 @@ const About = () => {
         <img src={myPicture} alt='Mark Christian Fajardo' />
 
         <div className={styles.texts}>
-          <p>
-            I never thought I wanted to be a programmer until I tried it.I never
-            thought I wanted to be a programmer until I tried it.
-          </p>
+          <p>I never thought I wanted to be a programmer until I tried it.</p>
 
           <p>
             My programming journey started when I was in college. We were given
