@@ -5,7 +5,7 @@ const projects = [
     number: 7,
     images: [],
     tech: ['mongoDB', 'express', 'react', 'node'],
-    link: 'https://62e2dd6e4844471ccf13f227--lively-gumption-2fffc2.netlify.app/',
+    link: 'https://layag-travel-tours.netlify.app/',
     repo: 'https://github.com/markaroone/project7-fe',
   },
   {

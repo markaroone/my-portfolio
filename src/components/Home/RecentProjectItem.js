@@ -30,7 +30,11 @@ const RecentProjectItem = ({ project, location }) => {
 
           <ul className={styles.tags}>
             {project.tech.map((tag, i) => (
-              <li key={i} className={styles.tag}>
+              <li
+                key={i}
+                className={styles.tag}
+                id={styles[`${tag.toLowerCase()}`]}
+              >
                 {tag}
               </li>
             ))}
