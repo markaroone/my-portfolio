@@ -1,6 +1,6 @@
 # My Website Portfolio
 
-This is my personal website portfolio
+This is my personal website portfolio for showcasing my projects as well as toher information about me as a developer.
 
 ## Authors
 
