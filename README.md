@@ -1,6 +1,6 @@
 # My Website Portfolio
 
-This is my personal website portfolio
+This is my personal website portfolio for showcasing my projects as well as other information about me as a developer. This project uses React.js for the frontend.
 
 ## Authors
 
