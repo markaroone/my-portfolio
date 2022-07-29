@@ -85,13 +85,13 @@
 }
 
 .name {
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 2vw, 2rem);
   font-weight: 700;
   color: #f8f9fa;
 }
 
 .description {
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
   font-weight: 400;
   color: #ced4da;
 }
@@ -99,7 +99,7 @@
 .tags {
   margin-top: 1.6rem;
   display: flex;
-  gap: 1.8rem;
+  gap: clamp(1.2rem, 2vw, 1.4rem);
 
   font-weight: 700;
 
@@ -109,7 +109,7 @@
 }
 
 .tags .tag {
-  padding: 0.3rem 1rem;
+  padding: 0.3rem clamp(0.8rem, 2vw, 1rem);
 
   display: flex;
   justify-content: center;
@@ -119,7 +119,7 @@
 
   background-color: rgba(223, 227, 231, 0.39);
 
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 @media (min-width: 992px) {
